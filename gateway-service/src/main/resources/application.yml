@@ -10,7 +10,7 @@ spring:
     # 使用 Naoos 作为服务注册发现
     nacos:
       discovery:
-        server-addr: 192.168.26.130:8848
+        server-addr: 114.67.177.190:8848
     # 使用 Sentinel 作为熔断器
     sentinel:
       transport:

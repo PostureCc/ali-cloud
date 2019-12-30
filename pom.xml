@@ -18,6 +18,7 @@
         <module>user-service</module>
         <module>commodity-service</module>
         <module>gateway-service</module>
+        <module>common-library</module>
     </modules>
 
 
