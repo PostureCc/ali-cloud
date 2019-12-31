@@ -1,5 +1,6 @@
 package com.chan.feign.user;
 
+import chan.model.VO.TokenVO;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,5 +13,10 @@ public class UserFeignFallback implements UserFeign {
     @Override
     public String login(String value) {
         return "触发熔断..";
+    }
+
+    @Override
+    public TokenVO feignObj(TokenVO tokenVO) {
+        return null;
     }
 }

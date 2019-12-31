@@ -1,10 +1,9 @@
 package com.chan.controller;
 
+import chan.model.VO.TokenVO;
 import com.chan.config.RestTemplateConfiguration;
 import com.chan.feign.user.UserFeign;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,6 +31,11 @@ public class CommodityController {
     @GetMapping("/feign")
     public String feign(@RequestParam("value") String value) {
         return userFeign.login(value);
+    }
+
+    @GetMapping("/feignObj")
+    public TokenVO feignObj(TokenVO tokenVO) {
+        return userFeign.feignObj(tokenVO);
     }
 
     @GetMapping("/rest")

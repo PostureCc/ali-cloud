@@ -19,6 +19,11 @@ public class UserController {
         return value;
     }
 
+    @GetMapping("/feignObj")
+    public TokenVO feignObj(TokenVO tokenVO) {
+        return tokenVO;
+    }
+
     public static void main(String[] args) {
         TokenVO tokenVO = TokenVO.builder().id(1L).name("test").build();
         System.err.println(tokenVO);
